@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 import { User } from "./models/User";
 import { Task } from "./models/Task";
+import { createDatabaseIfNotExists, configDatabase } from "./config/database";
 
 // Load environment variables
 dotenv.config();
@@ -217,14 +218,16 @@ app.use(
 async function startServer() {
   try {
     // console.log("Initializing database connection...");
-
+    createDatabaseIfNotExists(configDatabase);
     const server = app.listen(PORT, () => {
       console.log(`🚀 Server running on port ${PORT}`);
       console.log(`📋 Health check: http://localhost:${PORT}/health`);
       console.log(`📚 API endpoints:`);
       console.log(`   POST /api/users - Create user`);
       console.log(`   GET  /api/users/:id - Get user by ID`);
-      console.log(`   GET  /api/users/username/:username - Get user by username`);
+      console.log(
+        `   GET  /api/users/username/:username - Get user by username`
+      );
       console.log(`   POST /api/auth/login - Login user`);
       console.log(`   POST /api/tasks - Create task`);
       console.log(`   GET  /api/tasks/:id - Get task by ID`);
