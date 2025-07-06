@@ -2,7 +2,7 @@ import { Pool, PoolClient } from "pg";
 import { ITask,CreateTaskData } from "@/types/model";
 import { v4 as uuidv4 } from "uuid";
 import { pool } from "@/config/database";
-import { User } from "./user";
+import { User } from "./User";
 
 export class Task {
   public id?: string;

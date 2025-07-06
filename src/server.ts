@@ -224,9 +224,7 @@ async function startServer() {
       console.log(`📚 API endpoints:`);
       console.log(`   POST /api/users - Create user`);
       console.log(`   GET  /api/users/:id - Get user by ID`);
-      console.log(
-        `   GET  /api/users/username/:username - Get user by username`
-      );
+      console.log(`   GET  /api/users/username/:username - Get user by username`);
       console.log(`   POST /api/auth/login - Login user`);
       console.log(`   POST /api/tasks - Create task`);
       console.log(`   GET  /api/tasks/:id - Get task by ID`);

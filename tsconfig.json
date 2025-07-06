@@ -22,15 +22,7 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"],
-      "@/models/*": ["models/*"],
-      "@/migrations/*": ["models/*"],
-      "@/controllers/*": ["controllers/*"],
-      "@/routes/*": ["routes/*"],
-      "@/middlewares/*": ["middleware/*"],
-      "@/utils/*": ["utils/*"],
-      "@/config/*": ["config/*"],
-      "@/types/*": ["types/*"],
-      "@/services/*": ["services/*"]
+     
     }
   },
   "include": [
